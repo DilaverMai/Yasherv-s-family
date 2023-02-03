@@ -26,11 +26,12 @@ namespace Character
             var castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
-            if (!Physics.Raycast(castPoint, out hit, Mathf.Infinity,GroundLayers)) return;
-            
-            var targetPoint = hit.point;
-            targetPoint.y = Character.transform.position.y;
-            Character.transform.LookAt(targetPoint);
+            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, GroundLayers))
+            {
+                var targetPoint = hit.point;
+                targetPoint.y = Character.transform.position.y;
+                Character.transform.LookAt(targetPoint);
+            }
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
