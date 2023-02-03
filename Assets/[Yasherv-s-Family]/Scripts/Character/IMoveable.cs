@@ -6,5 +6,6 @@ namespace Character
     {
         void Move(Vector3 position);
         bool ReachedDestination();
+        void Stop();
     }
 }

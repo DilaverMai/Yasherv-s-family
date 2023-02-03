@@ -18,30 +18,20 @@ namespace Character
         
         private void Move()
         {
-            var horizontal = Input.GetAxisRaw("Horizontal");
-            var vertical = Input.GetAxisRaw("Vertical");
-            var characterVector = new Vector3(horizontal, 0, vertical);
-            _characterController.Move(characterVector);
-            //Character.transform.TransformDirection(characterVector);
+            //TODO: MUCO
         }
 
         private void LookMouse()
         {
-            var m_camera = Camera.main;
-                var lookAtPos = Input.mousePosition;
-            lookAtPos.z = Character.transform.position.z - m_camera.transform.position.z;
-            lookAtPos = m_camera.ScreenToWorldPoint(lookAtPos);
-            Character.transform.up = lookAtPos - Character.transform.position;
-            /*
             var castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
-            if (!Physics.Raycast(castPoint, out hit, Mathf.Infinity,GroundLayers)) return;
-            
-            var targetPoint = hit.point;
-            targetPoint.y = Character.transform.position.y;
-            Character.transform.LookAt(targetPoint);
-            */
+            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, GroundLayers))
+            {
+                var targetPoint = hit.point;
+                targetPoint.y = Character.transform.position.y;
+                Character.transform.LookAt(targetPoint);
+            }
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
