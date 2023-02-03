@@ -6,7 +6,7 @@ namespace Character
 {
     [System.Serializable]
     [RequireComponent(typeof(NavMeshAgent))]
-    public class CharacterMoveWithNavMesh:MonoBehaviour,IMoveable
+    public class CharacterMoveWithNavMesh:MonoBehaviour,IMoveable,IRoute
     {
         public MoveData MoveData;
         public NavMeshAgent NavAgent;
@@ -49,5 +49,10 @@ namespace Character
                 }
             }
         }
+    }
+
+    public interface IRoute
+    {
+        
     }
 }
