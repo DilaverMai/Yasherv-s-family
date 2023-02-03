@@ -1,16 +1,20 @@
+using Character;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Character
+namespace _Yasherv_s_Family_.Scripts.Character
 {
     public class AttackTrigger : MonoBehaviour
     { 
-        public Attacker attacker;
+        public IAttackable attacker;
+        public CharacterType targetCharacterType;
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<Health>(out var health))
-            {
-                attacker.Attack(health);
-            }
+            if (!other.TryGetComponent<IDamageable>(out var damageable)) return;
+            if (damageable.GetCharacterType != targetCharacterType) return;
+            
+            attacker.Attack(damageable);
+           
         }
     }
 }

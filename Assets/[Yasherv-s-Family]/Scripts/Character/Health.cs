@@ -4,8 +4,9 @@ using UnityEngine.Events;
 namespace Character
 {
     [System.Serializable]
-    public class Health: IDamageable,IInitializable
+    public class Health:MonoBehaviour,IDamageable,IInitializable
     {
+        public CharacterType CharacterType;
         public UnityAction OnHealthChange;
         public UnityAction OnHit;
         public UnityAction OnDeath;
@@ -13,8 +14,14 @@ namespace Character
         public int MaxHealth;
         public int CurrentHealth;
         public bool isDead => CurrentHealth <= 0;
-        
-        public void TakeDamage(ref Health health, int damage)
+
+
+        public CharacterType GetCharacterType
+        {
+            get => CharacterType;
+        }
+
+        public void TakeDamage(int damage)
         {
             if(isDead) return;
             
@@ -26,7 +33,7 @@ namespace Character
             else
                 OnHit?.Invoke();
         }
-
+        
         public void Initialize()
         {
             CurrentHealth = MaxHealth;
