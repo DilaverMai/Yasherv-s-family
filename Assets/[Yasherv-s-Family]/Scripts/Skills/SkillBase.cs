@@ -6,7 +6,10 @@ namespace YashervsFamaily.Scripts.Skills
 {
     public abstract class SkillBase : ScriptableObject
     {
-        public abstract void Skill();
+        public virtual void Skill()
+        {
+            
+        }
     }
 }
 

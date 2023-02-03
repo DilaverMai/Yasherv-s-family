@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bbacec4-f124-46ad-a358-afed60a77a86" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/StandartEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/StandartEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +12,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/SkillData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/FireSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/InputFieldEditor.cs" root0="SKIP_HIGHLIGHTING" />
