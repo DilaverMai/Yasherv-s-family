@@ -19,23 +19,3 @@ namespace Character
         }
     }
 }
-
-public class EnemyNav: MonoBehaviour, IMoveable
-{
-    public NavMeshAgent Agent;
-
-    public void Move(Vector3 position)
-    {
-        Agent.SetDestination(position);
-    }
-
-    public bool ReachedDestination()
-    {
-        return Agent.remainingDistance <= Agent.stoppingDistance;
-    }
-
-    public void Stop()
-    {
-        
-    }
-}

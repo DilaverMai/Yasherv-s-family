@@ -7,5 +7,6 @@ namespace Character
         void Move(Vector3 position);
         bool ReachedDestination();
         void Stop();
+        void StopAndStartDelay(float delay);
     }
 }
