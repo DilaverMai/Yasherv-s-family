@@ -1,13 +1,13 @@
-using Character;
-using Unity.Collections;
-
-[System.Serializable]
-public class SkillAttacker: Attacker,ISkillable
+namespace _Yasherv_s_Family_.Scripts.Character
 {
-    public SkillData skillData;
-    
-    public void UseSkill()
+    [System.Serializable]
+    public class SkillAttacker: Attacker,ISkillable
     {
-        skillData.OnSkillUse?.Invoke();
+        public SkillData skillData;
+    
+        public void UseSkill()
+        {
+            skillData.OnSkillUse?.Invoke();
+        }
     }
 }

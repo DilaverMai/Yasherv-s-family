@@ -4,7 +4,7 @@ using UnityEngine.AI;
 namespace Character
 {
     [System.Serializable]
-    public class CharacterMoveWithNavMesh: IInitializable,IMoveable
+    public class CharacterMoveWithNavMesh:MonoBehaviour, IInitializable,IMoveable
     {
         public MoveData MoveData;
         public NavMeshAgent NavAgent;

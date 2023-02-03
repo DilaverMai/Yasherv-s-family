@@ -1,4 +1,3 @@
-using Character;
 using UnityEngine;
 
 namespace Character
@@ -53,3 +52,4 @@ namespace Character
         }
     }
 }
+

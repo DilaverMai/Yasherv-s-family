@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Character
 {
     [Serializable]
-    public class CharacterAnimation<T>: IAnimable<T> where T:Enum
+    public abstract class CharacterAnimation<T>:MonoBehaviour, IAnimable<T> where T:Enum
     {
         public Animator Anim;
     

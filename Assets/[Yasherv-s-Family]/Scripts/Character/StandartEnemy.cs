@@ -1,23 +1,24 @@
+using _Yasherv_s_Family_.Scripts.Character;
+
 namespace Character
 {
     public class StandartEnemy : EnemyBase
     {
-        public Health HealthSystem;
-        public Attacker AttackSystem;
-        public SkillAttacker AttackSkillSystem;
-        public CharacterAnimation<EnemyAnimationList> AnimationSystem;
-        public CharacterMoveWithNavMesh MoveSystem;
-        
         public override void OnSpawn()
         {
-            HealthSystem.Initialize();
-
-            HealthSystem.OnDeath += () => AnimationSystem.PlayAnimation(EnemyAnimationList.Death);
+            // HealthSystem.Initialize();
+            //
+            // HealthSystem.OnDeath += () => AnimationSystem.PlayAnimation(EnemyAnimationList.Death);
         }
         
         public override void OnDeath()
         {
-            HealthSystem.OnDeath -= () => AnimationSystem.PlayAnimation(EnemyAnimationList.Death);
+            // HealthSystem.OnDeath -= () => AnimationSystem.PlayAnimation(EnemyAnimationList.Death);
         }
     }
+}
+
+public class EnemyNav
+{
+    
 }

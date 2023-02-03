@@ -1,3 +1,4 @@
+using System;
 using Character;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace _Yasherv_s_Family_.Scripts.Character
     public class Player : CharacterBase
     {
         public CharacterBaseController<Player> Controller;
-    
+        
         private void FixedUpdate()
         {
             Controller.OnUpdate();
@@ -15,12 +16,15 @@ namespace _Yasherv_s_Family_.Scripts.Character
 
         public override void OnDeath()
         {
-        
+            
         }
 
         public override void OnSpawn()
         {
        
         }
+
     }
+
+
 }

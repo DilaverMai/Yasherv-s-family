@@ -1,7 +1,13 @@
 namespace Character
 {
+    public enum CharacterType
+    {
+        Player,
+        Enemy
+    }
     public interface IDamageable
     {
-        void TakeDamage(ref Health health, int damage);
+        CharacterType GetCharacterType { get; }
+        void TakeDamage(int damage);
     }
 }
