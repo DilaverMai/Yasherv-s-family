@@ -22,6 +22,8 @@ namespace Character
         public TriggerArea<Player> _triggerArea;
         private Player targetEnemy;
         private bool stop;
+        public LineRenderer lineRenderer;
+        
         public void Start()
         {
             NavAgent.speed = MoveData.Speed;
@@ -37,12 +39,17 @@ namespace Character
             if (targetEnemy != null)
             {
                 Move(targetEnemy.transform.position);
+                lineRenderer.positionCount = 2;
+                lineRenderer.SetPositions(new[] {transform.position+ new Vector3(0,1,0), targetEnemy.transform.position});
                 if (_wayPointCoroutine == null) return;
                 StopCoroutine(_wayPointCoroutine);
                 _wayPointCoroutine = null;
             }
-            else if(_wayPointCoroutine == null)
+            else if (_wayPointCoroutine == null)
+            {
                 _wayPointCoroutine = StartCoroutine(AIUpdater());
+                lineRenderer.positionCount = 0;
+            }
         }
         
         private IEnumerator AIUpdater()

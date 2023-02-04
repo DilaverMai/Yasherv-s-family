@@ -9,8 +9,6 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using YashervsFamaily.Scripts.Character.Player;
-using YashervsFamaily.Scripts.SkillProgress;
-using YashervsFamaily.Scripts.Skills;
 using Random = UnityEngine.Random;
 
 public class DeckManager : Singleton<DeckManager>
@@ -79,11 +77,11 @@ public class DeckManager : Singleton<DeckManager>
                 Debug.Log("Card");
                 var spawnCard = Instantiate(selectCards[i],DeckTransform.position,Quaternion.identity,CardsTransform);
                 spawnCard.transform.localScale = Vector3.one * 0.55f;
-                spawnCard.transform.DOScale(Vector3.one,1f);
-                spawnCard.transform.DOLocalMove(CardPointsList[i].CardPoint,1f);
-                spawnCard.transform.DORotateQuaternion(CardPointsList[i].CardRotation,1f);
+                spawnCard.transform.DOScale(Vector3.one,.5f);
+                spawnCard.transform.DOLocalMove(CardPointsList[i].CardPoint,.5f);
+                spawnCard.transform.DORotateQuaternion(CardPointsList[i].CardRotation,.5f);
                 spawnedCards.Add(spawnCard.GetComponent<Card>());
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(.5f);
             }
 
             _coroutine = StartCoroutine(Selecter());

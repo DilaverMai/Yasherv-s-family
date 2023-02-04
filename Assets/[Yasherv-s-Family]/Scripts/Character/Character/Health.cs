@@ -29,7 +29,7 @@ namespace Character
 
         private void Update()
         {
-            HealthBarTransform.transform.rotation = Quaternion.Euler(0, 0, 0);
+            HealthBarTransform.transform.LookAt(Camera.main.transform);
         }
 
         public void SetBar(int health,int maxHealth)
