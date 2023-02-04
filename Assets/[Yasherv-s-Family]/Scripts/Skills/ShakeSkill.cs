@@ -13,9 +13,8 @@ namespace YashervsFamaily.Scripts.Skills
         {
             if(!other.TryGetComponent(out IDamageable damageable)) return;
             damageable.TakeDamage(15);
-            //TODO Shake InterFace
             if(!other.TryGetComponent(out EnemyAnimation enemyAnimation)) return;
-            //enemyAnimation.Anim
+            enemyAnimation.ShakeAnimation(1f, Vector3.one * 1.3f);
         }
     }
 }
