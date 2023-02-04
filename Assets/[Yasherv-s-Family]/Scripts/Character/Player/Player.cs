@@ -11,7 +11,7 @@ namespace _Yasherv_s_Family_.Scripts.Character
     {
         public CharacterBaseController<Player> Controller;
 
-        private void FixedUpdate()
+        private void Update()
         {
             Controller.OnUpdate();
         }

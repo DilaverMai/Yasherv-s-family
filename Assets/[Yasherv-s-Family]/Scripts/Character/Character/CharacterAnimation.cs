@@ -15,10 +15,16 @@ namespace Character
             else 
                 Anim.CrossFade(animEnum.ToString(), normalizedTransitionTime, layer);
         }
+        
 
         public bool CheckAnim(ref T animEnum)
         {
             return Anim.GetCurrentAnimatorStateInfo(0).IsName(animEnum.ToString());
+        }
+
+        public virtual void SetSpeed(float speed = 0)
+        {
+            Anim.SetFloat("Speed", speed);
         }
     }
 }

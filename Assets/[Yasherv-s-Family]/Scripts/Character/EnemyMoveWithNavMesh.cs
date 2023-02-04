@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using _Yasherv_s_Family_.Scripts.Character;
+using DG.Tweening;
+using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
@@ -103,6 +105,13 @@ namespace Character
         {
             StopCoroutine(_wayPointCoroutine);
             _wayPointCoroutine = null;
+        }
+        
+        [Button]
+        public void BackJump()
+        {
+            NavAgent.isStopped = true;
+            transform.DOJump(transform.position + transform.forward * -2, 1, 1, .5f).OnComplete(() => NavAgent.isStopped = false);
         }
         
         private void OnDrawGizmos()
