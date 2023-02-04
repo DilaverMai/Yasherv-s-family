@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -5,17 +6,16 @@ using UnityEngine;
 
 namespace YashervsFamaily.Scripts.SkillProgress
 {
-    public class SkillManager : MonoBehaviour
+    public class SkillManager : Singleton<SkillManager>
     {
-
-        public static SkillManager Instance;
-        
         [SerializeField] private List<Collider2D> checkOverlay = new();
         [SerializeField] private GameObject qSkill;
         [SerializeField] private GameObject eSkill;
 
         [SerializeField] private LayerMask layerMask;
 
+        public static Action OnSkillUsed;
+        public static Action OnSkillKeyPressed;
 
         public bool IsIce;
         public bool IsFire;
@@ -57,4 +57,3 @@ namespace YashervsFamaily.Scripts.SkillProgress
         }
     }
 }
-
