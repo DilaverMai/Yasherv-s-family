@@ -4,20 +4,22 @@ using System.Linq;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class DeckManager : MonoBehaviour
+public class DeckManager : Singleton<DeckManager>
 {
-    public Image SelecetedImage;
-    public List<Image> SkillImages;
+    public Card SelectedCard;
     private Coroutine _coroutine;
     
-    public List<Card> Cards;
+    public List<GameObject> Cards;
     public List<CardPoints> CardPointsList;
     public RectTransform DeckTransform;
-
-    public GameObject CardPrefab;
+    public RectTransform CardsTransform;
     
+    private List<Card> spawnedCards = new List<Card>();
+
+    [System.Serializable]
     public struct CardPoints
     {
         public Vector3 CardPoint;
@@ -32,45 +34,46 @@ public class DeckManager : MonoBehaviour
     
     private IEnumerator Deck()
     {
-        var selectCards = Cards.ToList();
-        
-        while (selectCards.Count > 3)
+        while (true)
         {
+            var selectCards = Cards.ToList();
+        
             selectCards.RemoveAt(Random.Range(0,Cards.Count));
-        }
         
-        selectCards.Shuffle();
+            selectCards.Shuffle();
+        
+            for (var i = 0; i < 3; i++)
+            {
+                var spawnCard = Instantiate(selectCards[i],DeckTransform.position,Quaternion.identity,CardsTransform);
+                spawnCard.transform.localScale = Vector3.one * 0.55f;
+                spawnCard.transform.DOScale(Vector3.one,1f);
+                spawnCard.transform.DOLocalMove(CardPointsList[i].CardPoint,1f);
+                spawnCard.transform.DORotateQuaternion(CardPointsList[i].CardRotation,1f);
+                spawnedCards.Add(spawnCard.GetComponent<Card>());
+                yield return new WaitForSeconds(1f);
+            }
 
-       
-        for (int i = 0; i < 3; i++)
-        {
-            var spawnCard = Instantiate(CardPrefab,DeckTransform.position,Quaternion.identity);
-            spawnCard.transform.DOMove(CardPointsList[0].CardPoint,1f);
-            spawnCard.transform.DORotateQuaternion(CardPointsList[0].CardRotation,1f);
-            yield return new WaitForSeconds(1f);
-            CardPointsList.RemoveAt(0);
+            // _coroutine =
+            //wait selector coroutine
+            yield return  StartCoroutine(Selecter());
         }
-        
-        // var rand = new int[] { 0,1,2 }.ToList();
-        // rand.Shuffle();
-        //
-        // while (rand.Count != 0)
-        // {
-        //     if (Input.GetKeyDown(KeyCode.Q))
-        //     {
-        //         SelecetedImage = SkillImages[rand[0]];
-        //         SelecetedImage.transform.DOMoveY(SelecetedImage.transform.position.y +10,1f);
-        //         SelecetedImage.transform.DOScale(Vector3.one,.5f);
-        //         rand.RemoveAt(0);
-        //         yield break;
-        //     }
-        //     yield return null;
-        // }
     }
     
-    
-    
-    
+    private IEnumerator Selecter()
+    {
+        while (SelectedCard != null)
+        {
+            yield return null;
+        }
+
+        if (spawnedCards.Count == 0) yield break;
+        
+        SelectedCard = spawnedCards[0];
+        SelectedCard.transform.SetSiblingIndex(spawnedCards.Count - 1);
+
+        SelectedCard.transform.DOMoveY(SelectedCard.transform.position.y + 1f,.25f);
+        SelectedCard.transform.DOScale(Vector3.one * 1.25f,.5f);
+    }
 }
 
 public static class CardExtension
