@@ -9,5 +9,6 @@ namespace Character
         public float RotationSpeed;
         public float JumpPower;
         public float GravityPower;
+        public float Gravity;
     }
 }
