@@ -1,12 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
-using YashervsFamaily.Scripts.Character.Player;
-using YashervsFamaily.Scripts.Skills;
+
 
 namespace YashervsFamaily.Scripts.SkillProgress
 {

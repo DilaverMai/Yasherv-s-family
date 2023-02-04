@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2bbacec4-f124-46ad-a358-afed60a77a86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Other/Epic Toon FX/Materials/Basics/circle_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other/Epic Toon FX/Materials/Basics/circle_AB.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Other/Epic Toon FX/Materials/Basics/circle_ADD.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other/Epic Toon FX/Materials/Basics/circle_ADD.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Other/Epic Toon FX/Materials/Basics/circle_sharp_AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other/Epic Toon FX/Materials/Basics/circle_sharp_AB.mat" afterDir="false" />
@@ -52,6 +53,18 @@
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterBaseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/PlayerSkills.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/PlayerSkills.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/SkillProgress/SkillManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/SkillProgress/SkillManager.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/cape_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/cape_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_cape_Material_BaseMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/enemy_cape_Material_BaseMap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/eyes_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/eyes_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +72,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< Updated upstream
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/de80aed0bd3646409e8bfb15c101f005e2000/ac/2b9c92e3/Task.cs" root0="SKIP_HIGHLIGHTING" />
+=======
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Menu.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> Stashed changes
     <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/SkillData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,7 +163,7 @@
       <updated>1675435178623</updated>
       <workItem from="1675435179933" duration="19231000" />
       <workItem from="1675499055754" duration="65000" />
-      <workItem from="1675499340683" duration="11918000" />
+      <workItem from="1675499340683" duration="13526000" />
     </task>
     <servers />
   </component>
