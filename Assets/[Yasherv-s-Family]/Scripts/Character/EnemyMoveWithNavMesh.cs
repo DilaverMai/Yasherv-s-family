@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using _Yasherv_s_Family_.Scripts.Character;
+using _Yasherv_s_Family_.Scripts.Character.Attack;
 using _Yasherv_s_Family_.Scripts.Character.Player;
 using DG.Tweening;
 using Sirenix.OdinInspector;
@@ -24,6 +25,14 @@ namespace Character
         private bool stop;
         public LineRenderer lineRenderer;
         
+        
+        private Attacker _attacker;
+
+        private void Awake()
+        {
+            _attacker = GetComponent<Attacker>();
+        }
+
         public void Start()
         {
             NavAgent.speed = MoveData.Speed;
@@ -41,6 +50,7 @@ namespace Character
                 Move(targetEnemy.transform.position);
                 lineRenderer.positionCount = 2;
                 lineRenderer.SetPositions(new[] {transform.position+ new Vector3(0,1,0), targetEnemy.transform.position});
+                _attacker.Attack(targetEnemy.GetComponent<IDamageable>());
                 if (_wayPointCoroutine == null) return;
                 StopCoroutine(_wayPointCoroutine);
                 _wayPointCoroutine = null;
@@ -49,6 +59,8 @@ namespace Character
             {
                 _wayPointCoroutine = StartCoroutine(AIUpdater());
                 lineRenderer.positionCount = 0;
+                _attacker.Attack(null);
+
             }
         }
         
@@ -84,7 +96,9 @@ namespace Character
         public void Stop()
         {
             stop = true;
-            StopCoroutine(_wayPointCoroutine);
+            if (_wayPointCoroutine != null)
+                StopCoroutine(_wayPointCoroutine);
+
             _wayPointCoroutine = null;
             NavAgent.SetDestination(transform.position);
             NavAgent.isStopped = true;

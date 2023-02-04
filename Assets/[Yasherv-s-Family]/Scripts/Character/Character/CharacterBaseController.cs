@@ -16,7 +16,7 @@ namespace Character
         public T Character;
         public ContollerData ContollerData;
         public CharacterController _characterController;
-
+        public Rigidbody _rigidbody;
         public KeyCode AttackKey;
         // public KeyCode SkillTwo;
         public KeyCode KeyDash;
@@ -29,12 +29,14 @@ namespace Character
         
         private Vector3 MoveVector()
         {
-            return  new Vector3(Input.GetAxis("Horizontal"), -ContollerData.Gravity * Time.fixedDeltaTime,Input.GetAxis("Vertical"));
+            return  new Vector3(Input.GetAxis("Horizontal"), -ContollerData.Gravity ,Input.GetAxis("Vertical"));
         }
 
         private void Move()
         {
-            _characterController.Move(MoveVector() * (ContollerData.MoveSpeed  + extraSpeed) * Time.deltaTime);
+            // _rigidbody.velocity = MoveVector() * (ContollerData.MoveSpeed  + extraSpeed);
+            Debug.Log(MoveVector());
+            _characterController.Move(MoveVector() * ((ContollerData.MoveSpeed  + extraSpeed) * Time.fixedDeltaTime));
         }
         
         private void Rotation()
@@ -46,24 +48,27 @@ namespace Character
             if (!(moveRotation.magnitude > 0.1f)) return;
             
             var targetRotation = Quaternion.LookRotation(moveRotation);
-            // Character.transform.rotation = Quaternion.Lerp(Character.transform.rotation, targetRotation, 0.75f);
-            Character.transform.rotation = targetRotation;
+            Character.transform.rotation = Quaternion.Lerp(Character.transform.rotation, targetRotation, ContollerData.RotationSpeed * Time.fixedDeltaTime);
         }
         
-        private void RotationForSkill()
+        private Vector3 RotationForSkill()
         {
             Debug.Log("RotationForSkill");
             stopRotation = true;
             RaycastHit hit;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (!Physics.Raycast(ray, out hit, GroundLayer)) return;
+        
+            if (!Physics.Raycast(ray, out hit,100, GroundLayer)) return default;
 
             DOTween.Kill("RotationForSkill");
-            var targetRotation = Quaternion.LookRotation(hit.point - Character.transform.position);
-            Character.transform.DORotateQuaternion(targetRotation, 0.35f).OnComplete(
+            var distance = (hit.point - Character.transform.position);
+            distance.y = 0;
+            var targetRotation = Quaternion.LookRotation(distance);
+            Character.transform.DORotateQuaternion(targetRotation, 0.55f).OnComplete(
                 ()=> stopRotation = false
                 ).SetId("RotationForSkill");
+
+            return targetRotation.eulerAngles;
         }
         
         private void UseSkillOne()
@@ -72,8 +77,8 @@ namespace Character
             {
                 var card = DeckManager.Instance.SelectedCard;
                 if(card == null) return;
-                RotationForSkill();
-                PlayerSkills.OnSkill.Invoke(card.SkillEnums);
+              
+                PlayerSkills.OnSkill.Invoke(card.SkillEnums,  RotationForSkill());
             }
             
             // if (Input.GetKeyDown(SkillOne))

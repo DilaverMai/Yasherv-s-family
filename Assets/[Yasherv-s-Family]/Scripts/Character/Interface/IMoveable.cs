@@ -8,5 +8,6 @@ namespace Character
         bool ReachedDestination();
         void Stop();
         void StopAndStartDelay(float delay);
+        void BackJump();
     }
 }

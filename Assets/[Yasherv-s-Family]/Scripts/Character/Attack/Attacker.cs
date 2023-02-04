@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Character;
 using UnityEngine;
@@ -6,33 +7,34 @@ using UnityEngine.Events;
 namespace _Yasherv_s_Family_.Scripts.Character.Attack
 {
     [System.Serializable]
-    public class Attacker :MonoBehaviour, IAttackable,IInitializable
+    public class Attacker :MonoBehaviour, IAttackable
     {
-        public AttackerData attackerData;
+        public int damage;
+        public float attackSpeed;
         public UnityAction OnAttack;
         private Coroutine _attackCoroutine;
-        
-        public void Initialize()
+        private IDamageable _damageable;
+
+        private void Start()
         {
-            
+            StartCoroutine(AttackIEnumerator());
         }
-        
-        IEnumerator AttackIEnumerator(IDamageable damageable)
+
+        IEnumerator AttackIEnumerator()
         {
-            while (damageable != null)
+            while (true)
             {
-                damageable.TakeDamage(attackerData.Damage);
+                yield return new WaitUntil(()=> _damageable != null);
+                _damageable.TakeDamage(damage);
                 OnAttack?.Invoke();
-                yield return new WaitForSeconds(attackerData.AttackSpeed);
+                yield return new WaitForSeconds(attackSpeed);
             }
             
-            _attackCoroutine = null;
         }
         
         public void Attack(IDamageable damageable)
         {
-            if(_attackCoroutine != null) return;
-            _attackCoroutine=StartCoroutine(AttackIEnumerator(damageable));
+            _damageable = damageable;
         }
     }
 }

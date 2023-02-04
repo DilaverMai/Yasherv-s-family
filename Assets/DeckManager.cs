@@ -40,7 +40,7 @@ public class DeckManager : Singleton<DeckManager>
         PlayerSkills.OnSkill += OnSkill;
     }
 
-    private void OnSkill(SkillsEnum obj)
+    private void OnSkill(SkillsEnum obj, Vector3 vector3)
     {
         ClearCard();
     }
