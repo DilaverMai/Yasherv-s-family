@@ -93,6 +93,15 @@ namespace Character
             extraSpeed = 0f;
         }
 
+         public void MaxSpeed()
+         {
+             if ( _characterController.velocity.magnitude > ContollerData.MaxSpeed + extraSpeed)
+             {
+                    //Character controller velocity is more than max speed
+                    
+             }
+         }
+         
         // ReSharper disable Unity.PerformanceAnalysis
         public void OnUpdate()
         {

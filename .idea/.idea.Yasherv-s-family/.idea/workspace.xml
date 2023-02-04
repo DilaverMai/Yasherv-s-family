@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2bbacec4-f124-46ad-a358-afed60a77a86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Animations/Yasherv/Standing 1H Magic Attack 01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Animations/Yasherv/Standing 1H Magic Attack 01.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Animations/Yasherv/Yasherv.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Animations/Yasherv/Yasherv.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Data/ContollerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Data/ContollerData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterBaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/EnemyMoveWithNavMesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/EnemyMoveWithNavMesh.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/PlayerAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/ContollerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/ContollerData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <updated>1675435178623</updated>
       <workItem from="1675435179933" duration="19231000" />
       <workItem from="1675499055754" duration="65000" />
-      <workItem from="1675499340683" duration="8721000" />
+      <workItem from="1675499340683" duration="11918000" />
     </task>
     <servers />
   </component>

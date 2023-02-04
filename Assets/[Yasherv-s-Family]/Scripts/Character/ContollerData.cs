@@ -6,9 +6,7 @@ namespace Character
     public class ContollerData: ScriptableObject
     {
         public float MoveSpeed;
-        public float RotationSpeed;
-        public float JumpPower;
-        public float GravityPower;
         public float Gravity;
+        public float MaxSpeed;
     }
 }
