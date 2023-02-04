@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using _Yasherv_s_Family_.Scripts.Character;
+using _Yasherv_s_Family_.Scripts.Character.Player;
 using UnityEngine;
+using YashervsFamaily.Scripts.Skills;
 
-public class ShieldSkill : MonoBehaviour
+public class ShieldSkill : SkillBase
 {
-    private void OnTriggerEnter(Collider other)
+    public override void OnTriggerEnter(Collider other)
     {
         if (!other.TryGetComponent(out Player player)) return;
         //TODO Shild eklendiğinde..

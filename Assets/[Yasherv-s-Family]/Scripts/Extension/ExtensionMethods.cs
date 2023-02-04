@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using _Yasherv_s_Family_.Scripts.Character.Player;
 using Character;
 using Cinemachine;
 using UnityEngine;
@@ -14,7 +15,7 @@ public static class ExtensionMethods
          return results.ToList().Select(x => x.GetComponent<EnemyBase>()).ToList();
      }*/
     
-   public static List<EnemyBase> GetCloseEnemies(this _Yasherv_s_Family_.Scripts.Character.Player player,float radius,LayerMask layerMask)
+   public static List<EnemyBase> GetCloseEnemies(this Player player,float radius,LayerMask layerMask)
    {
        var results = Physics.OverlapSphere(player.transform.position, radius, layerMask);
        var enemies = new List<EnemyBase>();

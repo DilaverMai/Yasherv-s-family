@@ -2,10 +2,26 @@
 using YashervsFamaily.Scripts.Skills;
 using UnityEngine.UI;
     
+
+public enum SkillsEnum
+{
+    Shield,
+    Fire,
+    Ice,
+    Lightning,
+    Poison,
+    Earth,
+    Wind,
+    Water,
+    Dark,
+    Light,
+    None
+}
 public class Card: MonoBehaviour
 {
-    public CardData cardData;
-    public SkillBase skillData;
+    public SkillsEnum SkillEnums;
+    // public CardData cardData;
+    // public SkillBase skillData;
     
     // public Image CardImage;
     // public Text CardName;

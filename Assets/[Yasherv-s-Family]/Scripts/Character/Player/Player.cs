@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Character;
 using UnityEngine;
 
-namespace _Yasherv_s_Family_.Scripts.Character
+namespace _Yasherv_s_Family_.Scripts.Character.Player
 {
     [RequireComponent(typeof(CharacterController))]
     public class Player : CharacterBase
@@ -14,6 +11,11 @@ namespace _Yasherv_s_Family_.Scripts.Character
         private void Update()
         {
             Controller.OnUpdate();
+        }
+
+        private void FixedUpdate()
+        {
+            Controller.OnFixedUpdate();
         }
 
         public override void OnDeath()

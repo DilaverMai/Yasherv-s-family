@@ -131,8 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a10a595ea8a456f8182a5e12921b14f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardData: {fileID: 0}
-  skillData: {fileID: 0}
+  SkillEnums: 2
 --- !u!1 &48695059572692019
 GameObject:
   m_ObjectHideFlags: 0

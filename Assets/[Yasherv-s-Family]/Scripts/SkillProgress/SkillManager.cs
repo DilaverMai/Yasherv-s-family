@@ -33,18 +33,18 @@ namespace YashervsFamaily.Scripts.SkillProgress
             eSkill = checkOverlay[1].gameObject;
         }
 
-        private void Update()
-        {
-            if (!IsSkillActive()) return;
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                
-            }
-            else if(Input.GetKeyDown(KeyCode.E))
-            {
-                
-            }
-        }
+        // private void Update()
+        // {
+        //     if (!IsSkillActive()) return;
+        //     if (Input.GetKeyDown(KeyCode.Q))
+        //     {
+        //         
+        //     }
+        //     else if(Input.GetKeyDown(KeyCode.E))
+        //     {
+        //         
+        //     }
+        // }
         private bool IsSkillActive()
         {
             return checkOverlay.Count > 1;

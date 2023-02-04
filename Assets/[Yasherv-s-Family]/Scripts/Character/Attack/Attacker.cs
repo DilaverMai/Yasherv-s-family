@@ -2,7 +2,7 @@ using Character;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace _Yasherv_s_Family_.Scripts.Character
+namespace _Yasherv_s_Family_.Scripts.Character.Attack
 {
     [System.Serializable]
     public class Attacker :MonoBehaviour, IAttackable,IInitializable

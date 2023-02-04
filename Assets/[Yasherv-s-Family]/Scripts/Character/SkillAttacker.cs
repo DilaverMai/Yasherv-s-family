@@ -1,3 +1,5 @@
+using _Yasherv_s_Family_.Scripts.Character.Attack;
+
 namespace _Yasherv_s_Family_.Scripts.Character
 {
     [System.Serializable]
