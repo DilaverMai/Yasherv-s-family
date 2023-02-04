@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2bbacec4-f124-46ad-a358-afed60a77a86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterMoveWithNavMesh.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Extension/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Extension/ExtensionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/PlayerSkills.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/PlayerSkills.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,23 +31,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/dilaverserif/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/dilaverserif/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/dilaverserif/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/mucahitakturk/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/Users/mucahitakturk/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
+      "/Users/mucahitakturk/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.17f1/Unity.app/Contents/MacOS/Unity" />
@@ -97,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675435178623</updated>
       <workItem from="1675435179933" duration="19231000" />
+      <workItem from="1675492972807" duration="2147000" />
     </task>
     <servers />
   </component>

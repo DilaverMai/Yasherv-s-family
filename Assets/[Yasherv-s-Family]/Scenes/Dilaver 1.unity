@@ -620,6 +620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dd01a73bac44a6cb52309cabdea31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  iceParticle: {fileID: 0}
 --- !u!1 &724115954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db5dee7c7f441abb845736d1ce2d6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerData: {fileID: 0}
+  attackerData: {fileID: 11400000, guid: 00e574fdcfda540bbaf157ef7c8f80e7, type: 2}
 --- !u!114 &1863711689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,12 +1232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aee6592f6a1482a8e70a3739a7be2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveData: {fileID: 11400000, guid: 52cea3295e9ea49ffbfa38b2a9ebd703, type: 2}
-  NavAgent: {fileID: 1863711691}
-  WayPoints:
-  - {x: -5.01, y: 0, z: 4.92}
-  - {x: -9.5, y: 0, z: 8.34}
-  - {x: -10.37, y: 0, z: 12.72}
 --- !u!195 &1863711691
 NavMeshAgent:
   m_ObjectHideFlags: 0
