@@ -2,58 +2,86 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using YashervsFamaily.Scripts.Items;
 
 
 namespace YashervsFamaily.Scripts.SkillProgress
 {
     public class SkillManager : Singleton<SkillManager>
     {
-        [SerializeField] private List<Collider2D> checkOverlay = new();
-        [SerializeField] private GameObject qSkill;
-        [SerializeField] private GameObject eSkill;
-
-        [SerializeField] private LayerMask layerMask;
 
         public static Action OnSkillUsed;
         public static Action OnSkillKeyPressed;
 
-        public bool IsIce;
-        public bool IsFire;
-        public bool IsShake;
-        public bool IsShield;
-        public bool IsDash;
-        
-        
-
-        private void FixedUpdate()
+        private const string KeyIceCollected = "KEY_ICE_COLLECTED";
+        private const string KeyFireCollected = "KEY_FIRE_COLLECTED";
+        private const string KeyShakeCollected = "KEY_SHAKE_COLLECTED";
+        private const string KeyShieldCollected = "KEY_SHIELD_COLLECTED";
+        private const string KeyDashCollected = "KEY_DASH_COLLECTED";
+        public bool IsIceCollected
         {
-            checkOverlay = Physics2D.OverlapBoxAll(transform.position,Vector2.one * 50, layerMask).ToList();
-            if(!IsSkillActive()) return;
-            qSkill = checkOverlay[0].gameObject;
-            eSkill = checkOverlay[1].gameObject;
+            get => ES3.Load(KeyIceCollected, false);
+            set => ES3.Save(KeyIceCollected, value);
         }
 
-        // private void Update()
-        // {
-        //     if (!IsSkillActive()) return;
-        //     if (Input.GetKeyDown(KeyCode.Q))
-        //     {
-        //         
-        //     }
-        //     else if(Input.GetKeyDown(KeyCode.E))
-        //     {
-        //         
-        //     }
-        // }
-        private bool IsSkillActive()
+        public bool IsFireCollected
         {
-            return checkOverlay.Count > 1;
+            get => ES3.Load(KeyFireCollected, false);
+            set => ES3.Save(KeyFireCollected, value);
         }
-        
-        private void OnDrawGizmos()
+
+        public bool IsShakeCollected
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(transform.position,Vector2.one * 50);
+            get => ES3.Load(KeyShakeCollected, false);
+            set => ES3.Save(KeyShakeCollected, value);
+        }
+
+        public bool IsShieldCollected
+        {
+            get => ES3.Load(KeyShieldCollected, false);
+            set => ES3.Save(KeyShieldCollected, value);
+        }
+
+        public bool IsDashCollected
+        {
+            get => ES3.Load(KeyDashCollected, false);
+            set => ES3.Save(KeyDashCollected, value);
+        }
+
+        private void OnEnable()
+        {
+            IceItem.OnIceCollectItem += SetIceCollected;
+            FireItem.OnFireCollectItem += SetFireCollected;
+            ShakeItem.OnShakeCollectItem += SetShakeCollected;
+            ShieldItem.OnShieldCollectItem += SetShieldCollected;
+        }
+
+        private void OnDisable()
+        {
+            IceItem.OnIceCollectItem -= SetIceCollected;
+            FireItem.OnFireCollectItem -= SetFireCollected;
+            ShakeItem.OnShakeCollectItem -= SetShakeCollected;
+            ShieldItem.OnShieldCollectItem -= SetShieldCollected;
+        }
+
+        private void SetIceCollected()
+        {
+            IsIceCollected = true;
+        }
+
+        private void SetFireCollected()
+        {
+            IsFireCollected = true;
+        }
+
+        private void SetShakeCollected()
+        {
+            IsShakeCollected = true;
+        }
+
+        private void SetShieldCollected()
+        {
+            IsShieldCollected = true;
         }
     }
 }
