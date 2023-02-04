@@ -13,14 +13,10 @@ public class EnemyManager : MonoBehaviour
     {
             var loadedEnemies = ES3.KeyExists("Enemies") ? ES3.Load<List<bool>>("Enemies") : null;
 
-            if (loadedEnemies != null)
-            {
-                for (int i = 0; i < Enemies.Count; i++)
-                {
-                    Enemies[i].gameObject.SetActive(loadedEnemies[i]);
-                }
-            }
-           
+            if (loadedEnemies == null) return;
+            
+            for (var i = 0; i < Enemies.Count; i++)
+                Enemies[i].gameObject.SetActive(loadedEnemies[i]);
     }
 
     private void OnEnable()
