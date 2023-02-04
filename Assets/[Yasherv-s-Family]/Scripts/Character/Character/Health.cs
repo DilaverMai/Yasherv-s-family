@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,11 +15,14 @@ namespace Character
         public int MaxHealth;
         public int CurrentHealth;
         public bool isDead => CurrentHealth <= 0;
-
-
         public CharacterType GetCharacterType
         {
             get => CharacterType;
+        }
+
+        private void Start()
+        {
+            Initialize();
         }
 
         public void TakeDamage(int damage)

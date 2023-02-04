@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="2bbacec4-f124-46ad-a358-afed60a77a86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Data/ContollerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Data/ContollerData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/PlayerSkills.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player/PlayerSkills.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Dilaver/NavMesh.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/CharacterBaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Character/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/ContollerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/ContollerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +51,15 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/Users/mucahitakturk/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/Users/mucahitakturk/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/Users/mucahitakturk/.local/share/Symbols/src"
+      "C:\\Users\\dilav\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\dilav\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\dilav\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.17f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -58,7 +67,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2021.3.17f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -95,7 +104,8 @@
       <option name="presentableId" value="Default" />
       <updated>1675435178623</updated>
       <workItem from="1675435179933" duration="19231000" />
-      <workItem from="1675492972807" duration="2147000" />
+      <workItem from="1675499055754" duration="65000" />
+      <workItem from="1675499340683" duration="3380000" />
     </task>
     <servers />
   </component>

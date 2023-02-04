@@ -16,3 +16,4 @@ MonoBehaviour:
   RotationSpeed: 5
   JumpPower: 5
   GravityPower: 5
+  Gravity: 35
