@@ -15,7 +15,7 @@ namespace YashervsFamaily.Scripts.Character.Player
         [SerializeField] private GameObject iceParticle;
         [SerializeField] private GameObject shakeParticle;
         [SerializeField] private GameObject fireParticle;
-        [SerializeField] private GameObject shieldParticle;
+        [SerializeField] public GameObject shieldParticle;
         [SerializeField] private GameObject dashParticle;
         
         private SkillState currenSkillState;
@@ -28,12 +28,6 @@ namespace YashervsFamaily.Scripts.Character.Player
 
         [SerializeField] public LayerMask layerMask;
         [Range(0f, 10f), SerializeField] public float radius;
-
-        // private Action<PlayerSkills> OnIceParticleSkill;
-        // private Action<PlayerSkills> OnShakeParticleSkill;
-        // private Action<PlayerSkills> OnFireParticleSkill;
-        // private Action<PlayerSkills> OnShieldParticleSkill;
-        // private Action<PlayerSkills> OnDashParticleSkill;
 
         public static Action OnIceSkill;
         public static Action OnShakeSkill;
@@ -52,8 +46,6 @@ namespace YashervsFamaily.Scripts.Character.Player
 
         private void InvokeBySkill(SkillsEnum skill)
         {
-            Debug.Log("InvokeBySkill");
-            Debug.Log(skill.ToString());
             switch (skill)
             {
                 case SkillsEnum.Shield:
@@ -90,12 +82,6 @@ namespace YashervsFamaily.Scripts.Character.Player
         
         private void OnEnable()
         {
-            // OnIceParticleSkill += 
-            // OnShakeParticleSkill += 
-            // OnFireParticleSkill += 
-            // OnShieldParticleSkill += 
-            // OnDashParticleSkill += 
-
             OnIceSkill += IceSkill;
             OnShieldSkill += ShakeSkill;
             OnFireSkill += FireSkill;
@@ -107,12 +93,6 @@ namespace YashervsFamaily.Scripts.Character.Player
 
         private void OnDisable()
         {
-            // OnIceParticleSkill -= ((IceSkillState)iceSkillState).ParticlePlay;
-            // OnShakeParticleSkill -= ((ShakeSkillState)shakeSkillState).ParticlePlay;
-            // OnFireParticleSkill -= ((FireSkillState)fireSkillState).ParticlePlay;
-            // OnShieldParticleSkill -= ((ShieldSkillState)shieldSkillState).ParticlePlay;
-            // OnDashParticleSkill -= ((DashSkillState)dashSkillState).ParticlePlay;
-            
             OnIceSkill -= IceSkill;
             OnShieldSkill -= ShakeSkill;
             OnFireSkill -= FireSkill;
@@ -125,52 +105,27 @@ namespace YashervsFamaily.Scripts.Character.Player
         private void IceSkill()
         {
             ((IceSkillState)iceSkillState).ParticlePlay(this);
-            // OnIceParticleSkill?.Invoke(this);
         }
 
         private void ShakeSkill()
         {
-            // OnShakeParticleSkill?.Invoke(this);
             ((ShakeSkillState)shakeSkillState).ParticlePlay(this);
         }
 
         private void FireSkill()
         {
-            Debug.Log("Fire Fire Fire");
             ((FireSkillState)fireSkillState).ParticlePlay(this);
-            //OnFireParticleSkill?.Invoke(this);
         }
 
         private void ShieldSkill()
         {
             ((ShieldSkillState)shieldSkillState).ParticlePlay(this);
-            //OnShieldParticleSkill?.Invoke(this);
         }
 
         private void DashSkill()
         {
             ((DashSkillState)dashSkillState).ParticlePlay(this);
-            //OnDashParticleSkill?.Invoke(this);
         }
-
-        // private void Update()
-        // {
-        //     if (Input.GetKeyDown(KeyCode.E))
-        //     {
-        //         iceSkillState.ParticlePlay(this);
-        //     }
-        //
-        //     if (Input.GetKeyDown(KeyCode.Q))
-        //     {
-        //         fireSkillState.ParticlePlay(this);
-        //     }
-        //
-        //     if (Input.GetKeyDown(KeyCode.R))
-        //     {
-        //         shakeSkillState.ParticlePlay(this);
-        //     }
-        //     
-        // }
     }
 }
 

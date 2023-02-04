@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Yasherv_s_Family_.Scripts.Character;
+using _Yasherv_s_Family_.Scripts.Character.Player;
 using UnityEngine;
 using YashervsFamaily.Scripts.Items;
 

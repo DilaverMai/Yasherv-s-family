@@ -880,7 +880,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395641533}
-  m_LocalRotation: {x: 0.4247082, y: -0.33985114, z: 0.17591986, w: 0.8204733}
+  m_LocalRotation: {x: 0.42470822, y: -0.33985117, z: 0.17591992, w: 0.82047325}
   m_LocalPosition: {x: 12, y: 25, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -942,8 +942,7 @@ MonoBehaviour:
     Character: {fileID: 613180944}
     ContollerData: {fileID: 11400000, guid: 40bc549258c284e1cbe0e34fd87c6cc8, type: 2}
     _characterController: {fileID: 613180945}
-    SkillOne: 113
-    SkillTwo: 101
+    AttackKey: 0
     KeyDash: 32
     GroundLayer:
       serializedVersion: 2
@@ -982,6 +981,9 @@ MonoBehaviour:
   CharacterType: 0
   MaxHealth: 0
   CurrentHealth: 0
+  HealthBarRed: {fileID: 0}
+  HealthBarWhite: {fileID: 0}
+  HealthBarTransform: {fileID: 0}
 --- !u!114 &613180947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,7 +1381,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336199818}
-  m_LocalRotation: {x: 0.4247082, y: -0.33985114, z: 0.17591986, w: 0.8204733}
+  m_LocalRotation: {x: 0.42470822, y: -0.33985117, z: 0.17591992, w: 0.82047325}
   m_LocalPosition: {x: 12, y: 25, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1924,13 +1926,14 @@ GameObject:
   - component: {fileID: 1742234010}
   - component: {fileID: 1742234009}
   - component: {fileID: 1742234008}
+  - component: {fileID: 1742234011}
   m_Layer: 0
   m_Name: FireParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1742234008
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1980,6 +1983,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1742234011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742234007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f70a7cd0928445bf9f7ff334846326f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749152661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2288,9 @@ MonoBehaviour:
   CharacterType: 1
   MaxHealth: 10
   CurrentHealth: 0
+  HealthBarRed: {fileID: 0}
+  HealthBarWhite: {fileID: 0}
+  HealthBarTransform: {fileID: 0}
 --- !u!195 &1863711691
 NavMeshAgent:
   m_ObjectHideFlags: 0
