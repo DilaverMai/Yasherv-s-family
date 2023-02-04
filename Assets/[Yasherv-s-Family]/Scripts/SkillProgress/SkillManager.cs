@@ -13,11 +13,23 @@ namespace YashervsFamaily.Scripts.SkillProgress
     public class SkillManager : MonoBehaviour
     {
 
+        public static SkillManager Instance;
+        
         [SerializeField] private List<Collider2D> checkOverlay = new();
         [SerializeField] private GameObject qSkill;
         [SerializeField] private GameObject eSkill;
 
         [SerializeField] private LayerMask layerMask;
+
+
+        public bool IsIce;
+        public bool IsFire;
+        public bool IsShake;
+        public bool IsShield;
+        public bool IsDash;
+        
+        
+
         private void FixedUpdate()
         {
             checkOverlay = Physics2D.OverlapBoxAll(transform.position,Vector2.one * 50, layerMask).ToList();

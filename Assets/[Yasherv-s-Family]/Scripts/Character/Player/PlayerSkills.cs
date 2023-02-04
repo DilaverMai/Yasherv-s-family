@@ -111,9 +111,19 @@ namespace YashervsFamaily.Scripts.Character.Player
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                print(player.GetCloseEnemies(radius,layerMask).Count);
                 iceSkillState.ParticlePlay(this);
             }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                fireSkillState.ParticlePlay(this);
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                shakeSkillState.ParticlePlay(this);
+            }
+            
         }
     }
 }
@@ -172,6 +182,7 @@ public class FireSkillState : SkillState
 
     public override void ParticlePlay(PlayerSkills playerSkills)
     {
+        Particle.transform.SetPositionAndRotation(playerSkills.transform.position, playerSkills.transform.rotation);
         Particle.GetComponent<ParticleSystem>().Play();
     }
 }
@@ -186,6 +197,7 @@ public class ShieldSkillState : SkillState
     
     public override void ParticlePlay(PlayerSkills playerSkills)
     {
+        Particle.transform.SetPositionAndRotation(playerSkills.transform.position, playerSkills.transform.rotation);
         Particle.GetComponent<ParticleSystem>().Play();
     }
 }

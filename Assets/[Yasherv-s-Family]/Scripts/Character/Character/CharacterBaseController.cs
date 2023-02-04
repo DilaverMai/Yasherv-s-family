@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using _Yasherv_s_Family_.Scripts.Character;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Character
@@ -28,7 +30,7 @@ namespace Character
         {
             return  new Vector3(Input.GetAxis("Horizontal"), -ContollerData.Gravity * Time.deltaTime,Input.GetAxis("Vertical"));
         }
-        
+
         private void Move()
         {
             _characterController.Move(MoveVector() * (ContollerData.MoveSpeed  + extraSpeed) * Time.deltaTime);
@@ -77,6 +79,7 @@ namespace Character
                 //TODO: Use Skill Two
             }
 
+            
             if (Input.GetKeyDown(KeyDash))
             {
                 if(extraSpeed > 0) return;
