@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ContollerData
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  Gravity: 100
+  Gravity: 1000
   MaxSpeed: 4

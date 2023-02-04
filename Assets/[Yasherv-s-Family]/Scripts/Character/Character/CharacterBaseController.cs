@@ -6,6 +6,7 @@ using _Yasherv_s_Family_.Scripts.Character;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
+using YashervsFamaily.Scripts.Character.Player;
 
 namespace Character
 {
@@ -16,8 +17,8 @@ namespace Character
         public ContollerData ContollerData;
         public CharacterController _characterController;
 
-        public KeyCode SkillOne;
-        public KeyCode SkillTwo;
+        public KeyCode AttackKey;
+        // public KeyCode SkillTwo;
         public KeyCode KeyDash;
         
         public LayerMask GroundLayer;
@@ -28,7 +29,7 @@ namespace Character
         
         private Vector3 MoveVector()
         {
-            return  new Vector3(Input.GetAxis("Horizontal"), -ContollerData.Gravity * Time.deltaTime,Input.GetAxis("Vertical"));
+            return  new Vector3(Input.GetAxis("Horizontal"), -ContollerData.Gravity * Time.fixedDeltaTime,Input.GetAxis("Vertical"));
         }
 
         private void Move()
@@ -45,7 +46,8 @@ namespace Character
             if (!(moveRotation.magnitude > 0.1f)) return;
             
             var targetRotation = Quaternion.LookRotation(moveRotation);
-            Character.transform.rotation = Quaternion.Lerp(Character.transform.rotation, targetRotation, 0.55f);
+            // Character.transform.rotation = Quaternion.Lerp(Character.transform.rotation, targetRotation, 0.75f);
+            Character.transform.rotation = targetRotation;
         }
         
         private void RotationForSkill()
@@ -66,18 +68,26 @@ namespace Character
         
         private void UseSkillOne()
         {
-            if (Input.GetKeyDown(SkillOne))
+            if (Input.GetKeyDown(AttackKey))
             {
+                var card = DeckManager.Instance.SelectedCard;
+                if(card == null) return;
                 RotationForSkill();
-                // _playerAnimation.PlayAnimation();
-                //TODO: Use Skill One
+                PlayerSkills.OnSkill.Invoke(card.SkillEnums);
             }
-
-            if (Input.GetKeyDown(SkillTwo))
-            {
-                RotationForSkill();
-                //TODO: Use Skill Two
-            }
+            
+            // if (Input.GetKeyDown(SkillOne))
+            // {
+            //     RotationForSkill();
+            //     // _playerAnimation.PlayAnimation();
+            //     //TODO: Use Skill One
+            // }
+            //
+            // if (Input.GetKeyDown(SkillTwo))
+            // {
+            //     RotationForSkill();
+            //     //TODO: Use Skill Two
+            // }
 
             
             if (Input.GetKeyDown(KeyDash))
@@ -95,25 +105,19 @@ namespace Character
             await Task.Delay(250);
             extraSpeed = 0f;
         }
-
-         public void MaxSpeed()
-         {
-             if ( _characterController.velocity.magnitude > ContollerData.MaxSpeed + extraSpeed)
-             {
-                    //Character controller velocity is more than max speed
-                    
-             }
-         }
          
         // ReSharper disable Unity.PerformanceAnalysis
         public void OnUpdate()
         {
-            Move();
-            Rotation();
             UseSkillOne();
         }
 
 
+        public void OnFixedUpdate()
+        {
+            Rotation();
+            Move();
+        }
     }
 }
 
