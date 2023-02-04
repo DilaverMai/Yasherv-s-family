@@ -25,15 +25,5 @@ namespace _Yasherv_s_Family_.Scripts.Character
         {
        
         }
-
-        public List<EnemyBase> GetCloseEnemies()
-        {
-            var results = new Collider[] { };
-            Physics.OverlapSphereNonAlloc(transform.position, 5f, results);
-            return results.ToList().Select(x => x.GetComponent<EnemyBase>()).ToList();
-        }
-
     }
-
-
 }

@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bbacec4-f124-46ad-a358-afed60a77a86" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Yasherv-s-family/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Mucahit.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scenes/Mucahit.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/FireSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/FireSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/IceSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/IceSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +21,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Character/SkillData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Extension/ExtensionMethods.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/SkillProgress/SkillButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/SkillProgress/SkillManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/FireSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/ShakeSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[Yasherv-s-Family]/Scripts/Skills/SkillBase.cs" root0="FORCE_HIGHLIGHTING" />
