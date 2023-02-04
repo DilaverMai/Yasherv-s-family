@@ -111,10 +111,10 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -669444436047911388}
-    m_Position: {x: -240, y: 20, z: 0}
+    m_Position: {x: -230, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3870932122012774102}
-    m_Position: {x: -260, y: 230, z: 0}
+    m_Position: {x: -260, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7032411868939972311}
     m_Position: {x: -530, y: 230, z: 0}
@@ -188,7 +188,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -808950385494546787}
@@ -268,7 +268,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 628b3b3f731374d4f850360e42bb8564, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 5d95b4fcf761bf0428bc96d8c38b6cb4, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -320,7 +320,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 628b3b3f731374d4f850360e42bb8564, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 5d95b4fcf761bf0428bc96d8c38b6cb4, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -334,7 +334,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Spell
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4316452428287996219}

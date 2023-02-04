@@ -10,7 +10,7 @@ namespace _Yasherv_s_Family_.Scripts.Character
         Walk,
         Run,
         Attack,
-        Death
+        Death,
     }
     public class PlayerAnimation : CharacterAnimation<PlayerAnimations>
     {
