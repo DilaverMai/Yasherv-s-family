@@ -15,7 +15,7 @@ namespace YashervsFamaily.Scripts.Skills
             if(damageable.GetCharacterType is CharacterType.Player) return;
             damageable.TakeDamage(10);
             if(!other.TryGetComponent(out IMoveable move)) return;
-            move.Stop();
+            move.StopAndStartDelay(2f);
         }
     }
 }
