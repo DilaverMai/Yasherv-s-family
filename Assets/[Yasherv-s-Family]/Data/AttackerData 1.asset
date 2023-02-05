@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6500f7603349f596afd3156502774c, type: 3}
-  m_Name: MoveData
+  m_Script: {fileID: 11500000, guid: a2259e354ca14cc89788c3fe125635fa, type: 3}
+  m_Name: AttackerData 1
   m_EditorClassIdentifier: 
-  Speed: 0
+  CoolDown: 0
+  SkillRange: 0
+  SkillDamage: 0
+  Prefab: {fileID: 0}
+  OnSkillUse:
+    m_PersistentCalls:
+      m_Calls: []

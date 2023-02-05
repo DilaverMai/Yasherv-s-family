@@ -8,5 +8,5 @@ namespace Character
         public float MoveSpeed;
         public float Gravity;
         public float MaxSpeed;
-    }
-}
+        public float RotationSpeed;
+    }}

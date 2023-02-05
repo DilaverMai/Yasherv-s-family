@@ -27,7 +27,9 @@ namespace _Yasherv_s_Family_.Scripts.Character
         public Tween ShakeAnimation(float time,Vector3 strength)
         {
             DOTween.Kill("ShakeAnimation" + gameObject.GetInstanceID());
-            return transform.DOShakeScale(time, strength).SetId("ShakeAnimation" + gameObject.GetInstanceID());
+            return transform.DOShakeScale(time, strength).SetId("ShakeAnimation" + gameObject.GetInstanceID())
+                .OnComplete(
+                    () => transform.localScale = Vector3.one);
         }
 
         private void Update()
