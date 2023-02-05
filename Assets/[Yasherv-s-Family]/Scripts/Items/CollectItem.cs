@@ -7,10 +7,10 @@ using YashervsFamaily.Scripts.Items;
 public class CollectItem : MonoBehaviour
 {
     [SerializeField] private ItemBase item;
+    [SerializeField] private ParticleSystem particleSystem;
 
     private void OnTriggerEnter(Collider other)
     {
-        item.ItemTriggerEnter(other, this.gameObject);
-        BallManager.OnSkill?.Invoke(SkillsEnum.Ice);
+        item.ItemTriggerEnter(other, particleSystem, this.gameObject);
     }
 }

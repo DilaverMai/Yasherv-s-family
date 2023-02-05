@@ -13,10 +13,12 @@ namespace YashervsFamaily.Scripts.Items
         public static Action OnShieldCollectItem;
         public override SkillsEnum SkillType { get => SkillsEnum.Shield; }
 
-        public override void ItemTriggerEnter(Collider other, GameObject gameObject)
+        public override void ItemTriggerEnter(Collider other,ParticleSystem particleSystem, GameObject gameObject)
         {
             if(!other.TryGetComponent(out Player player)) return;
             OnShieldCollectItem?.Invoke();
+            particleSystem.Stop();
+            BallManager.OnSkill?.Invoke(SkillType);
             gameObject.SetActive(false);
         }
     }

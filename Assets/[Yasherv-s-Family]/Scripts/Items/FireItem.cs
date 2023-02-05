@@ -13,10 +13,12 @@ public class FireItem : ItemBase
     public override SkillsEnum SkillType { get => SkillsEnum.Fire; }
     
 
-    public override void ItemTriggerEnter(Collider other,GameObject gameObject)
+    public override void ItemTriggerEnter(Collider other,ParticleSystem particleSystem,GameObject gameObject)
     {
         if (!other.TryGetComponent(out Player player)) return;
         OnFireCollectItem?.Invoke();
+        particleSystem.Stop();
+        BallManager.OnSkill?.Invoke(SkillType);
         gameObject.SetActive(false);
     }
 }
