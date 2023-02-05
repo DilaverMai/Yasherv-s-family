@@ -101,7 +101,7 @@ public class DeckManager : Singleton<DeckManager>
             SelectedCard = spawnedCards[0];
             SelectedCard.transform.SetSiblingIndex(spawnedCards.Count - 1);
 
-            SelectedCard.transform.DOMoveY(SelectedCard.transform.position.y + 1f,.25f);
+            SelectedCard.transform.DOMoveY(SelectedCard.transform.position.y + 100f,.25f);
             SelectedCard.transform.DOScale(Vector3.one * 1.25f,.5f);
         }
         
