@@ -47,7 +47,7 @@ namespace YashervsFamaily.Scripts.SkillProgress
             get => ES3.Load(KeyDashCollected, false);
             set => ES3.Save(KeyDashCollected, value);
         }
-
+        
         private void OnEnable()
         {
             IceItem.OnIceCollectItem += SetIceCollected;
