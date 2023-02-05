@@ -167,8 +167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000021815, y: 86.3}
-  m_SizeDelta: {x: 201.1109, y: 155.2824}
+  m_AnchoredPosition: {x: 0.00061178, y: 78.53584}
+  m_SizeDelta: {x: 227.71, y: 194.2944}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &48695059572692016
 CanvasRenderer:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f31fb036e7142ff4fbd74b4b2da1dc04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fdbea75dfb0aa041b3febbba7401b29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -319,8 +319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: -83.5}
-  m_SizeDelta: {x: 160.2318, y: 36.6044}
+  m_AnchoredPosition: {x: 0.4841, y: -86.48813}
+  m_SizeDelta: {x: 202.7676, y: 148.2533}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &48695060447200898
 CanvasRenderer:
@@ -350,7 +350,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Buyuk yanginda can verdi.\nBu sayede artik ate\u015F g\xFCc\xFCne sahip"
+  m_text: "\rUncle Sam froze to death far away from the castle. Ice is a gift from
+    him."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a115f3dd22b5ff4491f6789f335bf80, type: 2}
   m_sharedMaterial: {fileID: -8458211898948984907, guid: 7a115f3dd22b5ff4491f6789f335bf80, type: 2}
@@ -359,8 +360,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294926080
-  m_fontColor: {r: 0, g: 0.37088633, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -377,8 +378,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.8
-  m_fontSizeBase: 20.8
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -454,8 +455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.3, y: -19.5}
-  m_SizeDelta: {x: 33.1335, y: 33.1335}
+  m_AnchoredPosition: {x: 21.4143, y: -21.103}
+  m_SizeDelta: {x: 33.1909, y: 35.0545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &48695060479816860
 CanvasRenderer:
@@ -485,7 +486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2ebd124e8f449ef4a9c38e4b9e184023, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 476d187b03b45774d985ef3b3a73c5b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -561,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SAM AMCA
+  m_text: UNCLE SAM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a115f3dd22b5ff4491f6789f335bf80, type: 2}
   m_sharedMaterial: {fileID: -8458211898948984907, guid: 7a115f3dd22b5ff4491f6789f335bf80, type: 2}
@@ -570,8 +571,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294926080
-  m_fontColor: {r: 0, g: 0.37088633, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -588,8 +589,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.8
-  m_fontSizeBase: 20.8
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
