@@ -12,10 +12,14 @@ namespace YashervsFamaily.Scripts.Items
     public class ShakeItem : ItemBase
     {
         public static Action OnShakeCollectItem;
-        public override void ItemTriggerEnter(Collider other, GameObject gameObject)
+        public override SkillsEnum SkillType { get => SkillsEnum.Earth; }
+
+        public override void ItemTriggerEnter(Collider other,ParticleSystem particleSystem, GameObject gameObject)
         {
             if(!other.TryGetComponent(out Player player)) return;
             OnShakeCollectItem?.Invoke();
+            particleSystem.Stop();
+            BallManager.OnSkill?.Invoke(SkillType);
             gameObject.SetActive(false);
         }
     }
