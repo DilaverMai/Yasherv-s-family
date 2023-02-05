@@ -78,56 +78,56 @@ public class DeckManager : Singleton<DeckManager>
         
             selectCards.RemoveAt(Random.Range(0,Cards.Count));
 
-            yield return new WaitUntil(()=> HaveCard() == false);
-            
-            if (!SkillManager.Instance.IsFireCollected)
-            {
-                foreach (var card in selectCards)
-                {
-                    if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Fire)
-                    {
-                        selectCards.Remove(card);
-                    }
-                }                
-            }
-            
-            if (!SkillManager.Instance.IsIceCollected)
-            {
-                foreach (var card in selectCards)
-                {
-                    if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Ice)
-                    {
-                        selectCards.Remove(card);
-                    }
-                }                
-            }
-            
-            if (!SkillManager.Instance.IsShakeCollected)
-            {
-                foreach (var card in selectCards)
-                {
-                    if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Earth)
-                    {
-                        selectCards.Remove(card);
-                    }
-                }                
-            }
-            
-            if (!SkillManager.Instance.IsShieldCollected)
-            {
-                foreach (var card in selectCards)
-                {
-                    if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Shield)
-                    {
-                        selectCards.Remove(card);
-                    }
-                }                
-            }
+            // yield return new WaitUntil(()=> HaveCard() != false);
+            //
+            // if (!SkillManager.Instance.IsFireCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Fire)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+            //
+            // if (!SkillManager.Instance.IsIceCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Ice)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+            //
+            // if (!SkillManager.Instance.IsShakeCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Earth)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+            //
+            // if (!SkillManager.Instance.IsShieldCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Shield)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
 
             
             selectCards.Shuffle();
         
-            for (var i = 0; i <selectCards.Count; i++)
+            for (var i = 0; i <3; i++)
             {
                 Debug.Log("Card");
                 var spawnCard = Instantiate(selectCards[i],DeckTransform.position,Quaternion.identity,CardsTransform);

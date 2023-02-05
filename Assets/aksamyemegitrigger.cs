@@ -12,7 +12,8 @@ public class aksamyemegitrigger : MonoBehaviour
     {
         if (other.TryGetComponent(out Player player))
         {
-            SpeechManager.SpeechGirl.Invoke(3);
+            SpeechManager.SpeechGirl.Invoke(5);
+
             DOVirtual.DelayedCall(5, () =>
                 SceneManager.LoadScene("Menu")
             );

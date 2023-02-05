@@ -96845,6 +96845,60 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.012683272, y: 0.6029401, z: -0.059396923}
     m_Extent: {x: 3.759604, y: 4.1300435, z: 1.2179518}
   m_DirtyAABB: 0
+--- !u!1 &867839675277346662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6054052748239506806}
+  - component: {fileID: 4893697242226333210}
+  m_Layer: 0
+  m_Name: SpeechManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6054052748239506806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867839675277346662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6463884966371193903}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4893697242226333210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867839675277346662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acec82accc67aaa4ca5591ffa574dcd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speeches:
+  - 'Oh, My lovely mother. I can barely feel your body covering me. '
+  - 'Father, I wish I could help you. I can still hear your screams while you were
+    burning. '
+  - 'Brother... I wish you were with us that day. Not at that house which is collapsed. '
+  - 'Uncle Sam, I now that you made it for us. But... This is not fair. '
+  - Grandmother it is your turn we need you to be a whole part. Come to dinner with
+    us.  a
+  SpeechImage: {fileID: 1831441878}
+  SpeechText: {fileID: 1584917659}
 --- !u!1 &909326771339595091
 GameObject:
   m_ObjectHideFlags: 0
@@ -102835,6 +102889,7 @@ Transform:
   - {fileID: 182005294}
   - {fileID: 1239264135}
   - {fileID: 1086084005}
+  - {fileID: 6054052748239506806}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
