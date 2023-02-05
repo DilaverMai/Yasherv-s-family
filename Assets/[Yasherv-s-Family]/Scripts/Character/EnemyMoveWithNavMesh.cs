@@ -18,18 +18,19 @@ namespace Character
         public MoveData MoveData;
         public NavMeshAgent NavAgent;
 
-        public Vector3[] WayPoints;
+        // public Vector3[] WayPoints;
         private Coroutine _wayPointCoroutine,_searchEnemyCoroutine;
         public TriggerArea<Player> _triggerArea;
         private Player targetEnemy;
         private bool stop;
         public LineRenderer lineRenderer;
-        
+        public Health Health;
         
         private Attacker _attacker;
 
         private void Awake()
         {
+            startPos = transform.position;
             _attacker = GetComponent<Attacker>();
         }
 
@@ -41,48 +42,40 @@ namespace Character
 
         private void FixedUpdate()
         {
-            if(stop) return;
-            
-            targetEnemy = _triggerArea.GetTarget();
+            if (stop)
+                return;
 
+            targetEnemy = _triggerArea.GetTarget();
             if (targetEnemy != null)
             {
                 Move(targetEnemy.transform.position);
                 lineRenderer.positionCount = 2;
                 lineRenderer.SetPositions(new[] {transform.position+ new Vector3(0,1,0), targetEnemy.transform.position});
                 _attacker.Attack(targetEnemy.GetComponent<IDamageable>());
-                if (_wayPointCoroutine == null) return;
-                StopCoroutine(_wayPointCoroutine);
-                _wayPointCoroutine = null;
             }
             else if (_wayPointCoroutine == null)
             {
-                _wayPointCoroutine = StartCoroutine(AIUpdater());
                 lineRenderer.positionCount = 0;
-                _attacker.Attack(null);
-
+                Move(startPos);
+                // _wayPointCoroutine = StartCoroutine(AIUpdater());
             }
         }
+
+        public float raidus;
+        // private IEnumerator AIUpdater()
+        // {
+        //     lineRenderer.positionCount = 0;
+        //     _attacker.Attack(null);
+        //     while (!targetEnemy)
+        //     {
+        //         Move(RandWalkPosition());
+        //         yield return new WaitUntil(ReachedDestination);
+        //     }
+        //     
+        //     StopCoroutine(_wayPointCoroutine);
+        //     _wayPointCoroutine = null;
+        // }
         
-        private IEnumerator AIUpdater()
-        {
-            var wayPointIndex = 0;
-            
-            while (!targetEnemy)
-            {
-                targetEnemy = _triggerArea.GetTarget();
-                Move(WayPoints[wayPointIndex]);
-                yield return new WaitUntil(()=> ReachedDestination());
-                yield return new WaitForSeconds(.25f);
-                wayPointIndex++;
-                
-                if (wayPointIndex >= WayPoints.Length)
-                    wayPointIndex = 0;
-            }
-            
-            _wayPointCoroutine = null;
-        }
-
         public void Move(Vector3 position)
         {
             NavAgent.SetDestination(position);
@@ -90,11 +83,13 @@ namespace Character
 
         public bool ReachedDestination()
         {
-            return NavAgent.remainingDistance <= NavAgent.stoppingDistance;
+            return Vector3.Distance(transform.position, NavAgent.destination) > .5f;
         }
 
         public void Stop()
         {
+            lineRenderer.positionCount = 0;
+
             stop = true;
             if (_wayPointCoroutine != null)
                 StopCoroutine(_wayPointCoroutine);
@@ -104,6 +99,15 @@ namespace Character
             NavAgent.isStopped = true;
         }
 
+        private Vector3 startPos;
+        public Vector3 RandWalkPosition()
+        {
+            var rand = UnityEngine.Random.insideUnitSphere * raidus;
+            rand.y = startPos.y;
+            Debug.Log(startPos + rand);
+            return startPos + rand;
+        }
+        
         public void StopAndStartDelay(float delay)
         {
             Stop();
@@ -113,19 +117,21 @@ namespace Character
         IEnumerator DelayStarter(float delay)
         {
             yield return new WaitForSeconds(delay);
-            StartCoroutine(AIUpdater());
             StartRoute();
         }
 
         public void StartRoute()
         {
             stop = false;
-            _wayPointCoroutine = StartCoroutine(AIUpdater());
+            NavAgent.isStopped = false;
         }
 
         public void StopRoute()
         {
-            StopCoroutine(_wayPointCoroutine);
+            if (_wayPointCoroutine != null)
+            {
+                StopCoroutine(_wayPointCoroutine);
+            }
             _wayPointCoroutine = null;
         }
         
@@ -138,23 +144,23 @@ namespace Character
         
         private void OnDrawGizmos()
         {
-            if (WayPoints == null) return;
-            for (int i = 0; i < WayPoints.Length; i++)
-            {
-                Gizmos.color = Color.red;
-                Gizmos.DrawSphere(WayPoints[i], 0.5f);
-                
-                Gizmos.color = Color.magenta;
-                
-                
-                if (i != WayPoints.Length -1)
-                    Gizmos.DrawLine(WayPoints[i], WayPoints[(i + 1)]);
-                
-            }
-            
+            // if (WayPoints == null) return;
+            // for (int i = 0; i < WayPoints.Length; i++)
+            // {
+            //     Gizmos.color = Color.red;
+            //     Gizmos.DrawSphere(WayPoints[i], 0.5f);
+            //     
+            //     Gizmos.color = Color.magenta;
+            //     
+            //     
+            //     if (i != WayPoints.Length -1)
+            //         Gizmos.DrawLine(WayPoints[i], WayPoints[(i + 1)]);
+            //     
+            // }
+
             if(_triggerArea == null) return;
-            Handles.color = Color.red;
-            Handles.DrawWireDisc(transform.position,Vector3.down, _triggerArea.Radius,10f);
+            Gizmos.color = Color.green; 
+            Gizmos.DrawWireSphere(transform.position, _triggerArea.Radius);
         }
     }
 }

@@ -3,6 +3,16 @@ using UnityEngine;
 
 namespace Character
 {
+    public enum CharacterAnimations
+    {
+        Idle,
+        Walk,
+        Attack,
+        Hit,
+        Death
+    }
+    
+    
     [Serializable]
     public abstract class CharacterAnimation<T>:MonoBehaviour, IAnimable<T> where T:Enum
     {

@@ -15,7 +15,7 @@ namespace _Yasherv_s_Family_.Scripts.Character
         Death
     }
 
-    public class EnemyAnimation : CharacterAnimation<EnemyAnimations>
+    public class EnemyAnimation : CharacterAnimation<CharacterAnimations>
     {
         private NavMeshAgent _navMeshAgent;
 
