@@ -1,7 +1,7 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Character
@@ -21,7 +21,11 @@ namespace Character
         public Image HealthBarRed;
         public Image HealthBarWhite;
         public Transform HealthBarTransform;
-        
+        public CharacterAnimation<CharacterAnimations> CharacterAnimation;
+
+        public ParticleSystem hitParticle;
+        public ParticleSystem dieParticle;
+
         public CharacterType GetCharacterType
         {
             get => CharacterType;
@@ -59,27 +63,34 @@ namespace Character
 
             SetBar(CurrentHealth, MaxHealth);
             if (isDead)
+            {
                 OnDeath?.Invoke();
+                CharacterAnimation.PlayAnimation(CharacterAnimations.Death);
+                dieParticle.Play();
+                transform.DOScale(Vector3.zero, .5f).SetDelay(0.5f);
+                DOVirtual.DelayedCall( 2f, () =>
+                {
+                    gameObject.SetActive(false);
+                    if (CharacterType == CharacterType.Player)
+                    {
+                        SceneManager.LoadScene("Menu");
+                    }
+                });
+
+
+            }
             else
+            {
+                CharacterAnimation.PlayAnimation(CharacterAnimations.Hit);
+                hitParticle.Play();
                 OnHit?.Invoke();
+            }
         }
         
         public void Initialize()
         {
             CurrentHealth = MaxHealth;
         }
-    }
-}
-
-public class FindTarget<T>: IUpdater where T: Component
-{
-    public T FindedTarget;
-    public Transform Target;
-    
-    
-    public void OnUpdate()
-    {
-        
     }
 }
 

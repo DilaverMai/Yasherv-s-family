@@ -19,6 +19,8 @@ public class FireItem : ItemBase
         OnFireCollectItem?.Invoke();
         particleSystem.Stop();
         BallManager.OnSkill?.Invoke(SkillType);
+        SpeechManager.SpeechGirl.Invoke(1);
+
         gameObject.SetActive(false);
     }
 }

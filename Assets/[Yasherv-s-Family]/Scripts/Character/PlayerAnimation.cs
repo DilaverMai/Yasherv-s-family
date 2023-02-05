@@ -12,7 +12,7 @@ namespace _Yasherv_s_Family_.Scripts.Character
         Attack,
         Death,
     }
-    public class PlayerAnimation : CharacterAnimation<PlayerAnimations>
+    public class PlayerAnimation : CharacterAnimation<CharacterAnimations>
     {
         private CharacterController _characterController;
 

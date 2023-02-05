@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using YashervsFamaily.Scripts.Character.Player;
+using YashervsFamaily.Scripts.SkillProgress;
 using Random = UnityEngine.Random;
 
 public class DeckManager : Singleton<DeckManager>
@@ -60,6 +61,13 @@ public class DeckManager : Singleton<DeckManager>
             SelectedCard = null;
         });
     }
+
+    private bool HaveCard()
+    {
+        return !SkillManager.Instance.IsFireCollected && !SkillManager.Instance.IsIceCollected &&
+                !SkillManager.Instance.IsShakeCollected
+                && !SkillManager.Instance.IsShieldCollected;
+    }
     
     private IEnumerator Deck()
     {
@@ -69,10 +77,57 @@ public class DeckManager : Singleton<DeckManager>
             var selectCards = Cards.ToList();
         
             selectCards.RemoveAt(Random.Range(0,Cards.Count));
-        
+
+            // yield return new WaitUntil(()=> HaveCard() != false);
+            //
+            // if (!SkillManager.Instance.IsFireCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Fire)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+            //
+            // if (!SkillManager.Instance.IsIceCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Ice)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+            //
+            // if (!SkillManager.Instance.IsShakeCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Earth)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+            //
+            // if (!SkillManager.Instance.IsShieldCollected)
+            // {
+            //     foreach (var card in selectCards)
+            //     {
+            //         if (card.GetComponent<Card>().SkillEnums == SkillsEnum.Shield)
+            //         {
+            //             selectCards.Remove(card);
+            //         }
+            //     }                
+            // }
+
+            
             selectCards.Shuffle();
         
-            for (var i = 0; i < 3; i++)
+            for (var i = 0; i <3; i++)
             {
                 Debug.Log("Card");
                 var spawnCard = Instantiate(selectCards[i],DeckTransform.position,Quaternion.identity,CardsTransform);

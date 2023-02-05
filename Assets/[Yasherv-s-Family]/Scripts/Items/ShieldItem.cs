@@ -19,6 +19,8 @@ namespace YashervsFamaily.Scripts.Items
             OnShieldCollectItem?.Invoke();
             particleSystem.Stop();
             BallManager.OnSkill?.Invoke(SkillType);
+            SpeechManager.SpeechGirl.Invoke(0);
+
             gameObject.SetActive(false);
         }
     }
