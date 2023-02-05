@@ -182,11 +182,15 @@ public class FireSkillState : SkillState
     {
         this.Particle = particle;
     }
-
     public override void ParticlePlay(PlayerSkills playerSkills)
     {
-        Particle.transform.SetPositionAndRotation(playerSkills.transform.position, playerSkills.transform.rotation);
-        Particle.GetComponent<ParticleSystem>().Play();
+        for (int i = 0; i < playerSkills.player.GetCloseEnemies(playerSkills.radius,playerSkills.layerMask).Count; i++)
+        {
+            var particle = Object.Instantiate(this.Particle,playerSkills.transform.position,Quaternion.identity);
+            var tempList = playerSkills.player.GetCloseEnemies(playerSkills.radius,playerSkills.layerMask);
+            particle.transform.LookAt(tempList[i].transform);
+            particle.GetComponent<Rigidbody>().velocity = particle.transform.TransformDirection(Vector3.forward * 20f);
+        }
     }
 }
 
