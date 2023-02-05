@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Character;
 using UnityEngine;
 using YashervsFamaily.Scripts.Character.Player;
-using YashervsFamaily.Scripts.SkillProgress;
 using YashervsFamaily.Scripts.Skills;
 
 public class FireObstacle : MonoBehaviour

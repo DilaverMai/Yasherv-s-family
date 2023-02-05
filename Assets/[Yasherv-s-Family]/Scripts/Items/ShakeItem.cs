@@ -12,6 +12,8 @@ namespace YashervsFamaily.Scripts.Items
     public class ShakeItem : ItemBase
     {
         public static Action OnShakeCollectItem;
+        public override SkillsEnum SkillType { get => SkillsEnum.Earth; }
+
         public override void ItemTriggerEnter(Collider other, GameObject gameObject)
         {
             if(!other.TryGetComponent(out Player player)) return;

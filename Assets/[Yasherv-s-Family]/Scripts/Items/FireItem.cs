@@ -10,6 +10,9 @@ using YashervsFamaily.Scripts.Items;
 public class FireItem : ItemBase
 {
     public static Action OnFireCollectItem;
+    public override SkillsEnum SkillType { get => SkillsEnum.Fire; }
+    
+
     public override void ItemTriggerEnter(Collider other,GameObject gameObject)
     {
         if (!other.TryGetComponent(out Player player)) return;

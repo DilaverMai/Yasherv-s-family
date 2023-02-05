@@ -12,6 +12,8 @@ namespace YashervsFamaily.Scripts.Items
     {
         public static Action OnIceCollectItem;
 
+        public override SkillsEnum SkillType { get => SkillsEnum.Ice; }
+
         public override void ItemTriggerEnter(Collider other, GameObject gameObject)
         {
             if (!other.TryGetComponent(out Player player)) return;

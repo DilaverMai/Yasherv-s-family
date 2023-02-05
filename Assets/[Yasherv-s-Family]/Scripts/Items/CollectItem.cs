@@ -11,5 +11,6 @@ public class CollectItem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         item.ItemTriggerEnter(other, this.gameObject);
+        BallManager.OnSkill?.Invoke(SkillsEnum.Ice);
     }
 }
