@@ -21,6 +21,6 @@ public class FireObstacle : MonoBehaviour
         if(_particleSystem.isStopped) return;
         if (!other.TryGetComponent(out PlayerSkills playerSkills)) return;
         if (!other.TryGetComponent(out IDamageable damageable)) return;
-        damageable.TakeDamage(10);  
+        damageable.TakeDamage(1000);  
     }
 }

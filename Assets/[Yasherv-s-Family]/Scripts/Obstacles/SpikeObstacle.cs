@@ -17,6 +17,6 @@ public class SpikeObstacle : MonoBehaviour
             playerSkills.shieldParticle.GetComponent<ParticleSystem>().Play();
             return;
         }
-        damageable.TakeDamage(10);  
+        damageable.TakeDamage(1000);
     }
 }
