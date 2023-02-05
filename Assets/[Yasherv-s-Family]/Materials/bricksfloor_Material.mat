@@ -105,9 +105,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Diffuse_Intensity: 0.5
-    - _Diffuse_Smoothness: 0.5
-    - _Diffuse_Threshold: 0.5
+    - _Diffuse_Intensity: 0.416
+    - _Diffuse_Smoothness: 0.364
+    - _Diffuse_Threshold: 0.383
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
@@ -123,9 +123,9 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Specular_Intensity: 0.5
-    - _Specular_Intensity_1: 0.1
-    - _Specular_Size: 1
+    - _Specular_Intensity: 0
+    - _Specular_Intensity_1: 0
+    - _Specular_Size: 0.01
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
