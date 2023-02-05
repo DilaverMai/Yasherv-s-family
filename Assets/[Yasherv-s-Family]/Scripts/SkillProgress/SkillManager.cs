@@ -9,10 +9,6 @@ namespace YashervsFamaily.Scripts.SkillProgress
 {
     public class SkillManager : Singleton<SkillManager>
     {
-
-        public static Action OnSkillUsed;
-        public static Action OnSkillKeyPressed;
-
         private const string KeyIceCollected = "KEY_ICE_COLLECTED";
         private const string KeyFireCollected = "KEY_FIRE_COLLECTED";
         private const string KeyShakeCollected = "KEY_SHAKE_COLLECTED";
@@ -82,6 +78,7 @@ namespace YashervsFamaily.Scripts.SkillProgress
         private void SetShieldCollected()
         {
             IsShieldCollected = true;
+            print("Collected");
         }
     }
 }

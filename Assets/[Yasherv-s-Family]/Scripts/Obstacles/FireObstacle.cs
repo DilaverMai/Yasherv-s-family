@@ -19,7 +19,7 @@ public class FireObstacle : MonoBehaviour
         {
             print("true");
             damageable.TakeDamage(0);
-            playerSkills.shieldParticle.SetActive(true);
+            playerSkills.shieldParticle.GetComponent<ParticleSystem>().Play();
             return;
         }
         print("false");
@@ -32,6 +32,5 @@ public class FireObstacle : MonoBehaviour
         if (!other.TryGetComponent(out IDamageable damageable)) return;
         if (!SkillManager.Instance.IsShieldCollected) return;
         damageable.TakeDamage(0);
-        playerSkills.shieldParticle.SetActive(false);
     }
 }
