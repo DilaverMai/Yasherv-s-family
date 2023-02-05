@@ -15,7 +15,7 @@ public class ShieldSkill : SkillBase
     {
         _particleSystem = GetComponent<ParticleSystem>();
         _collider = GetComponent<SphereCollider>();
-        _collider.radius = 0f;
+        _collider.enabled = false;
     }
 
     public override void OnTriggerEnter(Collider other)
@@ -32,10 +32,12 @@ public class ShieldSkill : SkillBase
     
     IEnumerator AfterDelay()
     {
+        _collider.enabled = true;
         _collider.radius = 2.7f;
         yield return new WaitForSeconds(3f);
         _particleSystem.Stop();
         _collider.radius = 0f;
+        _collider.enabled = false;
     }
     
     

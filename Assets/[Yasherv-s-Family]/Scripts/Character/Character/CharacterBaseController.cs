@@ -35,7 +35,6 @@ namespace Character
         private void Move()
         {
             // _rigidbody.velocity = MoveVector() * (ContollerData.MoveSpeed  + extraSpeed);
-            Debug.Log(MoveVector());
             _characterController.Move(MoveVector() * ((ContollerData.MoveSpeed  + extraSpeed) * Time.fixedDeltaTime));
         }
         
