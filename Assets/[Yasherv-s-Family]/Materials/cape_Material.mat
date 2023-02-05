@@ -83,7 +83,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _Ambient_Intensity: 0.5
+    - _Ambient_Intensity: 0.597
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -92,9 +92,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Diffuse_Intensity: 0.782
-    - _Diffuse_Smoothness: 0
-    - _Diffuse_Threshold: 0
+    - _Diffuse_Intensity: 1
+    - _Diffuse_Smoothness: 0.119
+    - _Diffuse_Threshold: 0.683
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
@@ -120,7 +120,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Vector4_c1bc7bfcda0e4bc9ba2ac6ceabd7b4c6: {r: 1, g: 1, b: 0, a: 0}
-    - _Ambient_Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _Ambient_Tint: {r: 0.8701759, g: 1, b: 0.8066038, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Diffuse_Tint: {r: 1, g: 1, b: 1, a: 1}
