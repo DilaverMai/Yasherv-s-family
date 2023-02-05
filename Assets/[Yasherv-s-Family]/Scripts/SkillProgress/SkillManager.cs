@@ -14,35 +14,15 @@ namespace YashervsFamaily.Scripts.SkillProgress
         private const string KeyShakeCollected = "KEY_SHAKE_COLLECTED";
         private const string KeyShieldCollected = "KEY_SHIELD_COLLECTED";
         private const string KeyDashCollected = "KEY_DASH_COLLECTED";
-        public bool IsIceCollected
-        {
-            get => ES3.Load(KeyIceCollected, false);
-            set => ES3.Save(KeyIceCollected, value);
-        }
+        public bool IsIceCollected;
 
-        public bool IsFireCollected
-        {
-            get => ES3.Load(KeyFireCollected, false);
-            set => ES3.Save(KeyFireCollected, value);
-        }
+        public bool IsFireCollected;
 
-        public bool IsShakeCollected
-        {
-            get => ES3.Load(KeyShakeCollected, false);
-            set => ES3.Save(KeyShakeCollected, value);
-        }
+        public bool IsShakeCollected;
 
-        public bool IsShieldCollected
-        {
-            get => ES3.Load(KeyShieldCollected, false);
-            set => ES3.Save(KeyShieldCollected, value);
-        }
+        public bool IsShieldCollected;
 
-        public bool IsDashCollected
-        {
-            get => ES3.Load(KeyDashCollected, false);
-            set => ES3.Save(KeyDashCollected, value);
-        }
+        public bool IsDashCollected;
         
         private void OnEnable()
         {

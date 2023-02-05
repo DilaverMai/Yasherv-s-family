@@ -26,7 +26,7 @@ public class aksammanager : MonoBehaviour
             agacsonrasiaicalak.gameObject.SetActive(true);
             SpeechManager.SpeechGirl.Invoke(4);
             other.gameObject.SetActive(false);
-            transform.position = tpPoint.position;
+            other.transform.position = tpPoint.position;
             other.gameObject.SetActive(true);
         }
     }
