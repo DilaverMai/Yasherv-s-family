@@ -33,6 +33,7 @@ MonoBehaviour:
     - Cinemachine
     - PPv2URPConverters
     - Sirenix.OdinInspector.Modules.UnityMathematics
+    - AssetCleaner
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
