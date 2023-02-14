@@ -74,6 +74,7 @@ namespace Character
         {
             if (Input.GetKeyDown(AttackKey))
             {
+                //await Task.Delay(1000);
                 var card = DeckManager.Instance.SelectedCard;
                 if(card == null) return;
               

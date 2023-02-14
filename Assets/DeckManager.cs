@@ -55,11 +55,9 @@ public class DeckManager : Singleton<DeckManager>
     public void ClearCard()
     {
         spawnedCards.RemoveAt(0);
-        SelectedCard.transform.DOScale(Vector3.zero,.25f).OnComplete(() =>
-        {
-            Destroy(SelectedCard.gameObject);
-            SelectedCard = null;
-        });
+        SelectedCard.transform.DOScale(Vector3.zero, .25f);
+        Destroy(SelectedCard.gameObject);
+        SelectedCard = null;
     }
 
     private bool HaveCard()
@@ -126,8 +124,8 @@ public class DeckManager : Singleton<DeckManager>
 
             
             selectCards.Shuffle();
-        
-            for (var i = 0; i <3; i++)
+
+            for (var i = 0; i < 3; i++) 
             {
                 Debug.Log("Card");
                 var spawnCard = Instantiate(selectCards[i],DeckTransform.position,Quaternion.identity,CardsTransform);
@@ -146,12 +144,12 @@ public class DeckManager : Singleton<DeckManager>
         }
     }
     
+    
     private IEnumerator Selecter()
     {
         while (spawnedCards.Count > 0)
         {
             yield return new WaitUntil(()=> SelectedCard == null);
-        
             if(spawnedCards.Count == 0) break;
             SelectedCard = spawnedCards[0];
             SelectedCard.transform.SetSiblingIndex(spawnedCards.Count - 1);
